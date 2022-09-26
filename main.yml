@@ -4,6 +4,9 @@
 
 - name: "SELinux workshop setup"
   hosts: all
+  remote_user: student
+  become: true
+  become_method: sudo
   tasks:
 
   - name: "Copy the testaudit file"
