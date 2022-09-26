@@ -4,7 +4,7 @@
 
 - name: "SELinux workshop setup"
   hosts: all
-  remote_user: student
+  remote_user: ec2-user
   become: true
   become_method: sudo
   tasks:
