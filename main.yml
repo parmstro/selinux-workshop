@@ -1,0 +1,15 @@
+---
+# Run the setup tasks for the selinux workshop
+#
+
+- name: "SELinux workshop setup"
+  hosts: all
+  tasks:
+
+  - name: "Copy the testaudit file"
+    copy:
+      src: files/testaudit
+      dest: /root/testaudit
+
+
+
