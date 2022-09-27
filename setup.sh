@@ -1,4 +1,5 @@
 #! /bin/bash
+echo "This script sets up our SELinux workshop …"
 ansible-galaxy collection install community.general
 ansible-galaxy collection install ansible.posix
 ansible-playbook -i inventory main.yml
