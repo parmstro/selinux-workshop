@@ -10,9 +10,22 @@
   tasks:
 
   - name: "Copy the testaudit file"
-    copy:
+    ansible.builtin.copy:
       src: files/testaudit
       dest: /root/testaudit
 
+  - name: "Copy the vimrc file"
+    ansible.builtin.copy:
+      src: files/vimrc
+      dest: /home/ec2-user/.vimrc
 
+
+  - name: "Install required utilities"
+    ansible.builtin.yum:
+      name: 
+        - "policycoreutils-devel"
+        - "policycoreutils-python-utils"
+        - "setools-console"
+        - "vim"
+      state: present
 
